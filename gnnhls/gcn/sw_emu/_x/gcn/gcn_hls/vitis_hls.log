@@ -1,0 +1,75 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2021.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'ubuntu' on host 'graphhls' (Linux_x86_64 version 4.15.0-48-generic) on Wed Aug 10 03:15:34 UTC 2022
+INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/ubuntu/GraphHLS/gcn_multicu/sw_emu/_x/gcn/gcn_hls'
+Sourcing Tcl script 'gcn_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project gcn_hls 
+INFO: [HLS 200-10] Creating and opening project '/home/ubuntu/GraphHLS/gcn_multicu/sw_emu/_x/gcn/gcn_hls/gcn_hls'.
+INFO: [HLS 200-1510] Running: set_top gcn_hls 
+INFO: [HLS 200-1510] Running: add_files /home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp -cflags  -g -I /home/ubuntu/GraphHLS/gcn_multicu/kernel -I /home/ubuntu/GraphHLS/gcn_multicu -I /home/ubuntu/GraphHLS/gcn_multicu/data  
+INFO: [HLS 200-10] Adding design file '/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/home/ubuntu/GraphHLS/gcn_multicu/sw_emu/_x/gcn/gcn_hls/gcn_hls/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 300.000000MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: config_rtl -kernel_profile 
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_debug -enable 
+INFO: [HLS 200-1510] Running: config_export -deadlock_detection none 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format xo -ipname gcn_hls 
+INFO: [HLS 200-1510] Running: csynth_design -synthesis_check 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.114 GB.
+INFO: [HLS 200-10] Analyzing design file '/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp' ... 
+WARNING: [HLS 207-5549] The 'off' option of the 'HLS stream' directive or pragma is deprecated, use type=pipo instead. (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:258:43)
+WARNING: [HLS 207-5549] The 'off' option of the 'HLS stream' directive or pragma is deprecated, use type=pipo instead. (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:265:46)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.22 seconds. CPU system time: 0.45 seconds. Elapsed time: 0.84 seconds; current allocated memory: 1.116 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:173:9)
+INFO: [HLS 214-291] Loop 'agg_ft_in' is marked as complete unroll implied by the pipeline pragma (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:77:16)
+INFO: [HLS 214-291] Loop 'rd_ft_in' is marked as complete unroll implied by the pipeline pragma (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:63:15)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:50:9)
+INFO: [HLS 214-186] Unrolling loop 'loop_output' (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:233:18) in function 'wr_output' completely with a factor of 144 (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:230:0)
+INFO: [HLS 214-186] Unrolling loop 'wr_stream_rst' (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:185:20) in function 'wr_stream_rst' completely with a factor of 144 (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:183:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:173:9) in function 'update_ft_in' completely with a factor of 144 (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:167:0)
+INFO: [HLS 214-186] Unrolling loop 'rd_stream_h' (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:157:18) in function 'rd_stream_h' completely with a factor of 144 (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:154:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:90:9) in function 'wr_to_stream1' completely with a factor of 144 (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:88:0)
+INFO: [HLS 214-186] Unrolling loop 'agg_ft_in' (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:77:16) in function 'aggregate_feat_in' completely with a factor of 144 (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:74:0)
+INFO: [HLS 214-186] Unrolling loop 'rd_ft_in' (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:63:15) in function 'read_feat_in' completely with a factor of 144 (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:60:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'rd_ft_in' (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:63:15) in function 'read_feat_in' has been removed because the loop is unrolled completely (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:60:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:26:5) in function 'init_array_zero1' completely with a factor of 144 (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:23:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:50:9) in function 'read_weight' completely with a factor of 144 (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:45:0)
+INFO: [HLS 214-178] Inlining function 'compute_all_node(float*, node_t_struct*, edge_gas_t_struct*, float*, unsigned long, unsigned long, float*)' into 'gcn_hls' (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:311:0)
+INFO: [HLS 214-248] Applying array_partition to 'ft_bf_array': Complete partitioning on dimension 1. (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:114:15)
+INFO: [HLS 214-248] Applying array_partition to 'ft_in_array': Complete partitioning on dimension 1. (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:121:8)
+INFO: [HLS 214-248] Applying array_partition to 'ft_bf2_array': Complete partitioning on dimension 1. (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:197:11)
+INFO: [HLS 214-248] Applying array_partition to 'rst_bf_array': Complete partitioning on dimension 1. (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:200:8)
+INFO: [HLS 214-248] Applying array_partition to 'ft_h_array': Complete partitioning on dimension 1. (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:256:8)
+INFO: [HLS 214-248] Applying array_partition to 'rst_temp_arry': Complete partitioning on dimension 1. (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:263:8)
+INFO: [HLS 214-248] Applying array_partition to 'w_array': Cyclic partitioning with factor 144 on dimension 1. (/home/ubuntu/GraphHLS/gcn_multicu/kernel/gcn.cpp:326:11)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 15.49 seconds. CPU system time: 0.71 seconds. Elapsed time: 15.3 seconds; current allocated memory: 206.234 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 206.234 MB.
+INFO: [HLS 200-1493] Running only source code synthesis checks, skipping scheduling and RTL generation.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 16.72 seconds. CPU system time: 1.18 seconds. Elapsed time: 16.16 seconds; current allocated memory: -934.965 MB.
+HLS completed successfully
+INFO: [HLS 200-112] Total CPU user time: 19.68 seconds. Total CPU system time: 2.24 seconds. Total elapsed time: 18.83 seconds; peak allocated memory: 1.116 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Wed Aug 10 03:15:52 2022...

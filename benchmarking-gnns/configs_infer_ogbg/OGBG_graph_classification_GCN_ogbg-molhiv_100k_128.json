@@ -1,0 +1,37 @@
+{
+    "gpu": {
+        "use": true,
+        "id": 0
+    },
+    
+    "model": "GCN",
+    "dataset": "ogbg-molhiv",
+    
+    "out_dir": "out_new/OGBG_graph_classification/ogbg-molhiv/GCN/",
+    
+    "params": {
+        "seed": 41,
+        "epochs": 1,
+        "batch_size": 32,
+        "init_lr": 5e-4,
+        "lr_reduce_factor": 0.5,
+        "lr_schedule_patience": 5,
+        "min_lr": 1e-6,
+        "weight_decay": 0.0,
+        "print_epoch_interval": 5,
+        "max_time": 12
+    },
+    
+    "net_params": {
+        "L": 1,
+        "hidden_dim": 128,
+        "out_dim": 128,
+        "residual": false,
+        "readout": "mean",
+        "in_feat_dropout": 0.0,
+        "dropout": 0.0,
+        "batch_norm": false,
+        "self_loop": false,
+        "pos_enc": false
+    }
+}

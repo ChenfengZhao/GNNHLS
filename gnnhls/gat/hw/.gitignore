@@ -1,0 +1,8 @@
+recv_from_FPGA.sh
+send_to_FPGA.sh
+copy_src_to_here.sh
+src/
+*_backup.ini
+*.csv
+*_2021.2
+Makefile_v*

@@ -1,0 +1,18 @@
+# This docker is for benchmarking gnn project
+# Create a docker based on ubuntu 18.04, including conda and other python environment for CPU.
+FROM ubuntu:16.04
+
+# System packages 
+RUN apt-get update && apt-get install -y curl
+
+# Install miniconda to /miniconda
+RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+    && bash Miniconda3-latest-Linux-x86_64.sh -p /miniconda -b \
+    && rm Miniconda3-latest-Linux-x86_64.sh
+
+ENV PATH=/miniconda/bin:${PATH}
+
+RUN conda update -y conda
+
+# Install gcc and g++ so that pip install will not fail
+RUN apt-get update && apt-get -y install gcc && apt-get -y install g++

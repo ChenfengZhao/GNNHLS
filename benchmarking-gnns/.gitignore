@@ -1,0 +1,57 @@
+#common
+**/*.DS_Store
+**/*.ipynb_checkpoints/
+**/__pycache__
+out/
+out_*/
+saved_data/
+test/
+
+gmail.py
+
+#SBM datasets
+data/SBMs/*.pkl
+
+#Superpixels datasets
+data/superpixels/*.pkl
+data/superpixels/*.zip
+PATH/
+
+#ZINC dataset
+data/molecules/*.pkl
+data/molecules/*.pickle
+data/molecules/*.zip
+data/molecules/zinc_full/*.pkl
+data/molecules/zinc_full/*.pickle
+
+#TSP
+data/TSP/*.txt
+data/TSP/*.pkl
+data/TSP/*.zip
+data/TSP/pyconcorde/
+
+#COLLAB
+data/COLLAB/*
+dataset/
+
+#CSL
+data/CSL/*.pkl
+data/CSL/*.zip
+data/CSL/*.pt
+
+# OGBG
+data/ogbg/*
+*.log
+
+# unnecessary files
+run_cpu_CSL.sh
+run_gpu_CSL.sh
+run_OGBG.sh
+run_gpu_OGBG_test.sh
+main_OGBG_graph_classification.py
+main_OGBG_graph_classification_v2.py
+.vscode
+
+cpu.toml
+
+
