@@ -80,8 +80,9 @@ void read_nod_src(node_t nod_src[N_NODES],
                 hls::stream<node_t>& nod_src_stream1,
                 hls::stream<node_t>& nod_src_stream2,
                 hls::stream<node_t>& nod_src_stream3){
-    #pragma HLS pipeline II=1
+    
     rd_nod_src_nloop: for(node_index_t n=nidx_begin; n<nidx_end; n++){
+        #pragma HLS pipeline II=1
         node_t nod_src_n = nod_src[n];
         nod_src_stream0 << nod_src_n;
         nod_src_stream1 << nod_src_n;
