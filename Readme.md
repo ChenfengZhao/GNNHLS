@@ -36,7 +36,7 @@ a header file defines.h and the following sub-directories:
 - HLS tools: Xilinx Vitis == 2020.2 and its dependencies (e.g. XRT driver)
 
 ### HardWare Requirements
-- Host: Multi-core X86 CPUs and/or NVIDIA RTX GPU
+- Host: Multi-core X86 CPUs and/or at least one NVIDIA RTX GPU
 - FPGA: We perform our HLS designs on Xilinx Alveo U280, but other Xilinx FPGAs supporting Vitis should also be fine
 
 ## Installation Guide
