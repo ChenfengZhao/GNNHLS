@@ -16,7 +16,7 @@ In the top level directory (GNNHLS):
       - gat - directory of Graph Attention Network (GAT) kernel.
       - monet - directory of Mixture Model Networks (MoNet) kernel.
       - gatedgcn - directory of Gated Graph ConvNet (GatedGCN) kernel.
-   - GNNGLSSupplementalMaterial.pdf - detailed description of GNN kernels, 
+   - GNNHLSSupplementalMaterial.pdf - detailed description of GNN kernels, 
      experimental methodology, characterization results, and absolute
      experiment results.
 
