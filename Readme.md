@@ -242,3 +242,14 @@ The input data set is in the public domain. The source code of this project is r
 If you think GNNHLS is helpful for your research, please cite the following paper:
 
 Chenfeng Zhao, Zehao Dong, Yixin Chen, Xuan Zhang, and Roger D. Chamberlain. 2023. GNNHLS: Evaluating Graph Neural Network Inference via High-Level Synthesis. In Proc. of 41st IEEE International Conference on Computer Design (ICCD), November 6-8, 2023, Washington, DC, USA
+
+[Arxiv's paper](https://arxiv.org/abs/2309.16022)
+```
+@misc{zhao2023gnnhls,
+      title={GNNHLS: Evaluating Graph Neural Network Inference via High-Level Synthesis}, 
+      author={Chenfeng Zhao and Zehao Dong and Yixin Chen and Xuan Zhang and Roger D. Chamberlain},
+      year={2023},
+      eprint={2309.16022},
+      archivePrefix={arXiv}
+}
+```
